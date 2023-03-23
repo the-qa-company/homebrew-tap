@@ -1,4 +1,5 @@
 # homebrew-tap
+[![Excavator](https://github.com/the-qa-company/homebrew-tap/actions/workflows/excavator.yml/badge.svg)](https://github.com/the-qa-company/homebrew-tap/actions/workflows/excavator.yml)
 
 - [homebrew-tap](#homebrew-tap)
   - [Usage](#usage)
