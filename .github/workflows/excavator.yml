@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@main
       - name: Excavate
         shell: pwsh
-        run: "scripts/exclavate.ps1
+        run: "scripts/exclavate.ps1"
         env:
           GIT_USER: github-actions
           GIT_MAIL: "github-actions@github.com"
