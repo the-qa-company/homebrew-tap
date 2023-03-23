@@ -1,0 +1,15 @@
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  run_update:
+    name: Run update command
+    runs-on: ubuntu-latest
+    step:
+      - uses: actions/checkout@v3
+      - name: Check command
+        shell: pwsh
+        run: "scripts/cmd_script.ps1 -Comment '${{ github.event.body }}' -GitUser 'github-actions' -GitMail 'github-actions@github.com' -IssueNumber '${{ github.event.issue.number }}'"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
