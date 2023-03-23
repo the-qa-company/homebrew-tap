@@ -1,0 +1,20 @@
+name: Excavator
+
+on:
+  workflow_dispatch:
+  schedule:
+    # run every 4 hours
+    - cron: "20 */4 * * *"
+jobs:
+  excavate:
+    name: Excavate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Excavate
+        shell: pwsh
+        run: "scripts/exclavate.ps1
+        env:
+          GIT_USER: github-actions
+          GIT_MAIL: "github-actions@github.com"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
