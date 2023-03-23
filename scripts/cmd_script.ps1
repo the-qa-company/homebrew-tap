@@ -92,9 +92,9 @@ class $($formula.id) < Formula
 $($formula.add)
 end
 "@ > $OutFile
-            git config "user.email" $env:GitMail
-            git config "user.name" $env:GitName
-            git config "user.password" $env:GITHUB_TOKEN
+            git config "user.email" "$env:GIT_MAIL"
+            git config "user.name" "$env:GIT_USER"
+            git config "user.password" "$env:GITHUB_TOKEN"
 
             git add $OutFile
             git commit -m "Update $formulaId to version $version"
