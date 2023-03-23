@@ -22,7 +22,8 @@ function AnswerGithubIssue {
 
     if ($null -ne $IssueNumber) {
         gh issue comment $IssueNumber --body "$Message"
-    } else {
+    }
+    else {
         Write-Host "Ignore sending issue to GH"
     }
 }
@@ -61,7 +62,7 @@ try {
 
             # Check the version regex
             if (!($ReleasePage -match $($formula.version_regex))) {
-                AnswerGithubIssue "Can't sync formula $formulaId: Missing version regex match!"
+                AnswerGithubIssue "Can't sync formula $($formulaId): Missing version regex match!"
                 return
             }
 
@@ -107,6 +108,7 @@ end
             return
         }
     }
-} finally {
-  $prevPwd | Set-Location
+}
+finally {
+    $prevPwd | Set-Location
 }
