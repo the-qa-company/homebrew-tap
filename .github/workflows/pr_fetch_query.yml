@@ -1,10 +1,12 @@
+name: Run issue commands
+
 on:
   issue_comment:
     types: [created]
 
 jobs:
   run_update:
-    name: Run update command
+    name: Run command
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
