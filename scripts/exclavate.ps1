@@ -12,7 +12,7 @@ try {
 
     foreach ($formulaId in $formulaList.Keys) {
         Write-Host "Syncing the formula $formulaId..."
-        
+
         $formula = $formulaList[$formulaId]
         
         # Fetch release page
@@ -46,9 +46,9 @@ try {
         Write-Host "Writing new formula in $OutFile"
         @"
 class $($formula.id) < Formula
-homepage "$($formula.homepage)"
-url "$downloadURI"
-sha256 "$hash"
+  homepage "$($formula.homepage)"
+  url "$downloadURI"
+  sha256 "$hash"
 
 $($formula.add)
 end
@@ -61,8 +61,6 @@ end
 
     git commit -m "Update $formulaId to version $version"
     git push
-
-    AnswerGithubIssue "the formula $formulaId is now sync with the version $version."
 }
 finally {
     $prevPwd | Set-Location
