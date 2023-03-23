@@ -6,7 +6,7 @@ jobs:
   run_update:
     name: Run update command
     runs-on: ubuntu-latest
-    step:
+    steps:
       - uses: actions/checkout@v3
       - name: Check command
         shell: pwsh
