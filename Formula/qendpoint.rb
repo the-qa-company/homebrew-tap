@@ -1,10 +1,10 @@
 class Qendpoint < Formula
   homepage "https://github.com/the-qa-company/qEndpoint"
-  url "https://github.com/the-qa-company/qEndpoint/releases/download/v1.11.0/qendpoint-cli.zip"
-  sha256 "aa08ea4e4fce7358b78d9e0bb5d2bed1f83099f85bb9454c468fd6f5b83f6cfc"
+  url "https://github.com/the-qa-company/qEndpoint/releases/download/v1.11.2/qendpoint-cli.zip"
+  sha256 "811d97c5bdd059df660c69874b92dbdabb2f65938739175a789128b5eedd776c"
 
-  depends_on "openjdk"
-  
+  depends_on "openjdk"  
+
   def install
     prefix.install Dir["*"]
   end
