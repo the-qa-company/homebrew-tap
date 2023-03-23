@@ -2,9 +2,6 @@ param(
     [string]
     $Comment,
     $GitUser,
-    $GitMail,
-    $GitPushUser,
-    $GitName,
     $IssueNumber
 )
 
@@ -95,12 +92,13 @@ class $($formula.id) < Formula
 $($formula.add)
 end
 "@ > $OutFile
-            git config --global user.email $GitMail
-            git config --global user.name $GitName
-            
+            git config "user.email" $env:GitMail
+            git config "user.name" $env:GitName
+            git config "user.password" $env:GITHUB_TOKEN
+
             git add $OutFile
             git commit -m "Update $formulaId to version $version"
-            gh repo sync
+            git push
 
             AnswerGithubIssue "the formula $formulaId is now sync with the version $version."
             break
