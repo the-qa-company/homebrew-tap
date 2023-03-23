@@ -4,6 +4,7 @@ param(
     $GitUser,
     $GitMail,
     $GitPushUser,
+    $GitName,
     $IssueNumber
 )
 
@@ -94,7 +95,8 @@ class $($formula.id) < Formula
 $($formula.add)
 end
 "@ > $OutFile
-            git config "user.email" $GitMail
+            git config --global user.email $GitMail
+            git config --global user.name $GitName
             
             git add $OutFile
             git commit -m "Update $formulaId to version $version"

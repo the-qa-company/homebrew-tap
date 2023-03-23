@@ -10,6 +10,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: Check command
         shell: pwsh
-        run: "scripts/cmd_script.ps1 -Comment '${{ github.event.comment.body }}' -GitUser 'github-actions' -GitMail 'github-actions@github.com' -IssueNumber '${{ github.event.issue.number }}'"
+        run: "scripts/cmd_script.ps1 -Comment '${{ github.event.comment.body }}' -GitUser 'github-actions' -GitMail 'github-actions@github.com' -GitName 'github-actions' -IssueNumber '${{ github.event.issue.number }}'"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
