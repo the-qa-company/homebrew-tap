@@ -1,7 +1,7 @@
 class Qendpoint < Formula
   homepage "https://github.com/the-qa-company/qEndpoint"
-  url "https://github.com/the-qa-company/qEndpoint/releases/download/v1.12.0/qendpoint-cli.zip"
-  sha256 "5fd922df5a11e4586872f93814204b172aeefa4318f42b52385d8305b59951a4"
+  url "https://github.com/the-qa-company/qEndpoint/releases/download/v1.13.1/qendpoint-cli.zip"
+  sha256 "e1409147c184f96975781313b0f5d760c367ed5a31ea94406c6244ab7e833b38"
 
   depends_on "openjdk"  
 
