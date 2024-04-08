@@ -8,7 +8,7 @@
     "download_uri": "https://github.com/the-qa-company/qEndpoint/releases/download/v{{version}}/qendpoint-cli.zip"
   },
   "wikichanges": {
-    "id": "WikiChanges",
+    "id": "Wikichanges",
     "homepage": "https://github.com/the-qa-company/wiki-changes",
     "add": "  depends_on \"openjdk\"  \n\n  def install\n    prefix.install Dir[\"*\"]\n  end",
     "check_url": "https://github.com/the-qa-company/wiki-changes/releases/latest",
