@@ -6,5 +6,13 @@
     "check_url": "https://github.com/the-qa-company/qEndpoint/releases/latest",
     "version_regex": "Release ([\\d.]+)",
     "download_uri": "https://github.com/the-qa-company/qEndpoint/releases/download/v{{version}}/qendpoint-cli.zip"
+  },
+  "wikichanges": {
+    "id": "WikiChanges",
+    "homepage": "https://github.com/the-qa-company/wiki-changes",
+    "add": "  depends_on \"openjdk\"  \n\n  def install\n    prefix.install Dir[\"*\"]\n  end",
+    "check_url": "https://github.com/the-qa-company/wiki-changes/releases/latest",
+    "version_regex": "Release ([\\d.]+)",
+    "download_uri": "https://github.com/the-qa-company/wiki-changes/releases/download/v{{version}}/wikidata-changes.zip"
   }
 }
